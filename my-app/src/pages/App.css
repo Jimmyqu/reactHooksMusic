@@ -1,0 +1,123 @@
+.App {
+    text-align: center;
+}
+
+
+/* //阻止浏览器警告 */
+
+* {
+    touch-action: pan-y;
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* //enter是入场前的刹那（点击按钮） */
+
+.fade-enter {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.fade-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 500ms;
+}
+
+
+/* //同理，出场前的一刹那，以下就不详细解释了，一样的道理 */
+
+.fade-exit {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fade-exit-active {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 500ms;
+}
+
+
+/* 路由前进时的入场/离场动画 */
+
+.forward-enter {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.forward-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 500ms;
+}
+
+.forward-exit {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.forward-exit-active {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 500ms;
+}
+
+
+/* 路由后退时的入场/离场动画 */
+
+.back-enter {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.back-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 500ms;
+}
+
+.back-exit {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.back-exit-active {
+    opacity: 0;
+    transform: translate(100%);
+    transition: all 500ms;
+}
